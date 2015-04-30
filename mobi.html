@@ -226,109 +226,20 @@
 					    },
 					});
 					
+		
 					
-					
-					$("#server-uptime-chart").dxChart({
-						dataSource: [
-							{id: ++i, 	sales: 1},
-							{id: ++i, 	sales: 4},
-							{id: ++i, 	sales: 4},
-							{id: ++i, 	sales: 4},
-							{id: ++i, 	sales: 5},
-							{id: ++i, 	sales: 5},
-							{id: ++i, 	sales: 6},
-							{id: ++i, 	sales: 7},
-						],
-					 
-						series: {
-							argumentField: "id",
-							valueField: "sales",
-							name: "Sales",
-							type: "bar",
-							color: '#68b828'
-						},
-						commonAxisSettings: {
-							label: {
-								visible: false
-							},
-							grid: {
-								visible: false
-							}
-						},
-						legend: {
-							visible: false
-						},
-						argumentAxis: {
-					        valueMarginsEnabled: true
-					    },
-						valueAxis: {
-							max: 12
-						},
-						equalBarWidth: {
-							width: 11
-						}
-					});
-					
-					
-					
-					// Average Sales Chart
-					var doughnut1_data_source = [
-						{region: "Asia", val: 4119626293},
-						{region: "Africa", val: 1012956064},
-						{region: "Northern America", val: 344124520},
-						{region: "Latin America and the Caribbean", val: 590946440},
-						{region: "Europe", val: 727082222},
-						{region: "Oceania", val: 35104756},
-						{region: "Oceania 1", val: 727082222},
-						{region: "Oceania 3", val: 727082222},
-						{region: "Oceania 4", val: 727082222},
-						{region: "Oceania 5", val: 727082222},
-					], timer;
-					
-					$("#sales-avg-chart div").dxPieChart({
-						dataSource: doughnut1_data_source,
-						tooltip: {
-							enabled: false,
-						  	format:"millions",
-							customizeText: function() { 
-								return this.argumentText + "<br/>" + this.valueText;
-							}
-						},
-						size: {
-							height: 90
-						},
-						legend: {
-							visible: false
-						},  
-						series: [{
-							type: "doughnut",
-							argumentField: "region"
-						}],
-						palette: ['#5e9b4c', '#6ca959', '#b9f5a6'],
-					});
-					
+
 					
 					// Resize charts
 					$(window).on('xenon.resize', function()
 					{
 						$("#pageviews-visitors-chart").data("dxChart").render();
-						$("#server-uptime-chart").data("dxChart").render();
-						$("#realtime-network-stats").data("dxChart").render();
-						
-						$('.first-month').data("dxSparkline").render();
-						$('.second-month').data("dxSparkline").render();
-						$('.third-month').data("dxSparkline").render();
+
 					});
 					
 				});
 
 
-				function between(randNumMin, randNumMax)
-				{
-					var randInt = Math.floor((Math.random() * ((randNumMax + 1) - randNumMin)) + randNumMin);
-					
-					return randInt;
-				}
 			</script>
 			<!-- Xenon Verical Counter -->				
 			<div class="row">
@@ -421,27 +332,6 @@
 			
 		  </script>
 		
-
-					<script type="text/javascript">
-					  document.addEventListener('DOMContentLoaded', function() {
-					  	var URL = "1_jkX0g0_jdskSpFve8xQqw9e1UAsiYD-lYWsi01ujOw"
-					  	Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, } )
-					  })
-  
-
-					  function showInfo(data) {
-					    var html = Sheetsee.ich.photogrid({'rows': data})
-					    $('#photogrid').html(html)
-					    var optionsJSON = ["metric"]
-					      $('#photogrid a').each(function() {
-					          if($(this).attr('href') === '' || $(this).text() === 'N/A') {
-					              $(this).addClass("disabled");
-					          }
-					      });
-					     }
-			 
-			 
-				 </script>
 				 <div class="row">
 					 <a name="datavisitors"></a>
 					 <div class="panel panel-default">
@@ -465,18 +355,18 @@
 											if( ! $.isFunction($.fn.dxChart))
 												return;					
 											var dataSource = [
-{month: 'Jan', waittime: 0.97, goal: 0.94},
-{month: 'Feb', waittime: 0.51, goal: 0.91},
-{month: 'Mar', waittime: 0.79, goal: 0.89},
-{month: 'Apr', waittime: 0.63, },
-{month: 'May', waittime: 0.91, },
-{month: 'Jun', waittime: 0.98, },
-{month: 'Jul', waittime: 0.99, },
-{month: 'Aug', waittime: 0.99, },
-{month: 'Sep', waittime: 1, },
-{month: 'Oct', waittime: 0.97,},
-{month: 'Nov', waittime: 0.99,},
-{month: 'Dec', waittime: 0.92, },
+{month: 'Jan', waittime: 97, goal: 94},
+{month: 'Feb', waittime: 51, goal: 91},
+{month: 'Mar', waittime: 79, goal: 89},
+{month: 'Apr', waittime: 63,},
+{month: 'May', waittime: 91,},
+{month: 'Jun', waittime: 98,},
+{month: 'Jul', waittime: 99,},
+{month: 'Aug', waittime: 99,},
+{month: 'Sep', waittime: 100, },
+{month: 'Oct', waittime: 97, },
+{month: 'Nov', waittime: 99, },
+{month: 'Dec', waittime: 92, },
 											];
 								
 											$("#bar-3").dxChart({
@@ -720,18 +610,18 @@
 																	return;
 									
 																var dataSource = [
-{month: 'Jan', waittime: 0.027, goal: 0.083},
-{month: 'Feb', waittime: 0.045, goal: 0.08},
-{month: 'Mar', waittime: 0.047, goal: 0.091},
-{month: 'Apr', waittime: 0.046,},
-{month: 'May', waittime: 0.04,},
-{month: 'Jun', waittime: 0.049,},
-{month: 'Jul', waittime: 0.046,},
-{month: 'Aug', waittime: 0.049,},
-{month: 'Sep', waittime: 0.046,},
-{month: 'Oct', waittime: 0.052,},
-{month: 'Nov', waittime: 0.063,},
-{month: 'Dec', waittime: 0.065,},
+{month: 'Jan', waittime: 2.7, goal: 8.3},
+{month: 'Feb', waittime: 4.5, goal: 8},
+{month: 'Mar', waittime: 4.7, goal: 9.1},
+{month: 'Apr', waittime: 4.6,},
+{month: 'May', waittime: 4,},
+{month: 'Jun', waittime: 4.9,},
+{month: 'Jul', waittime: 4.6,},
+{month: 'Aug', waittime: 4.9,},
+{month: 'Sep', waittime: 4.6,},
+{month: 'Oct', waittime: 5.2,},
+{month: 'Nov', waittime: 6.3,},
+{month: 'Dec', waittime: 6.5,},
 																];
 								
 																$("#bar-5").dxChart({
@@ -740,8 +630,9 @@
 																		argumentField: "month"
 																	},
 																	series: [
-																		{ valueField: "goal", name: "2014", color: "#990000" },
-																		{ valueField: "waittime", name: "2015", color: "#40bbea" },
+																		{ valueField: "waittime", name: "2014", color: "#40bbea" },
+																		{ valueField: "goal", name: "2015", color: "#990000" },
+																		
 										
 																	],
 																	argumentAxis:{
@@ -871,8 +762,8 @@
 																		argumentField: "month"
 																	},
 																	series: [
-																		{ valueField: "goal", name: "2013", color: "#990000" },
-																		{ valueField: "waittime", name: "2014", color: "#40bbea" },
+																		{ valueField: "waittime", name: "2013", color: "#40bbea" },
+																		{ valueField: "goal", name: "2014", color: "#990000" },
 										
 																	],
 																	argumentAxis:{
@@ -1001,8 +892,9 @@
 																		argumentField: "month"
 																	},
 																	series: [
-																		{ valueField: "goal", name: "2013", color: "#990000" },
-																		{ valueField: "waittime", name: "2014", color: "#40bbea" },
+																		{ valueField: "waittime", name: "2013", color: "#40bbea" },
+																		
+																		{ valueField: "goal", name: "2014", color: "#990000" },
 										
 																	],
 																	argumentAxis:{
