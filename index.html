@@ -21,6 +21,8 @@
 	<link rel="stylesheet" href="assets/css/custom.css">
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/csi.js"></script>
+	
 	<link rel="stylesheet" href="assets/css/addtohomescreen.css">
 	<script src="assets/js/addtohomescreen.js"></script>
 	<script>
@@ -40,56 +42,6 @@
 </head>
 <body class="page-body">
 	
-	<div class="settings-pane">
-			
-		<a href="#" data-toggle="settings-pane" data-animate="true">
-			&times;
-		</a>
-		
-		<div class="settings-pane-inner">
-			
-			<div class="row">
-				
-				<div class="col-md-4">
-					
-					<div class="user-info">
-						
-						<div class="user-image">
-							<a href="extra-profile.html">
-								<img src="assets/images/user-2.png" class="img-responsive img-circle" />
-							</a>
-						</div>
-						
-						<div class="user-details">
-							
-							<h3>
-								<a href="extra-profile.html">John Smith</a>
-								
-								<!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
-								<span class="user-status is-online"></span>
-							</h3>
-							
-							<p class="user-title">Web Developer</p>
-							
-							<div class="user-links">
-								<a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
-								<a href="extra-profile.html" class="btn btn-success">Upgrade</a>
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-
-				
-			</div>
-		
-		</div>
-		
-	</div>
-	
 	<nav class="navbar horizontal-menu navbar-fixed-top navbar-minimal"><!-- set fixed position by adding class "navbar-fixed-top" -->
 		
 		<div class="navbar-inner">
@@ -105,22 +57,7 @@
 				
 			<!-- Mobile Toggles Links -->
 			<div class="nav navbar-mobile">
-			
-				<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
-				<div class="mobile-menu-toggle">
-					<!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
-					<a href="#" data-toggle="settings-pane" data-animate="true">
-						<i class="linecons-cog"></i>
-					</a>
-					
-					<a href="#" data-toggle="user-info-menu-horizontal">
-						<i class="fa-bell-o"></i>
-						<span class="badge badge-success">7</span>
-					</a>
-					
-					<!-- data-toggle="mobile-menu-horizontal" will show horizontal menu links only -->
-					<!-- data-toggle="mobile-menu" will show sidebar menu links only -->
-					<!-- data-toggle="mobile-menu-both" will show sidebar and horizontal menu links -->
+							<div class="mobile-menu-toggle">
 					<a href="#" data-toggle="mobile-menu-horizontal">
 						<i class="fa-bars"></i>
 					</a>
@@ -135,12 +72,13 @@
 			<!-- main menu -->
 					
 			<ul class="navbar-nav">
-				<li  class="opened active">
+				<li>
 					<a href="index.html">
 						<i class="linecons-cog"></i>
 						<span class="title">Top Sheet</span>
 					</a>
 				</li>
+
 				<li>
 					<a href="moed.html">
 						<i class="linecons-desktop"></i>
@@ -153,7 +91,7 @@
 						<span class="title">HSPS</span>
 					</a>
 				</li>
-				<li>
+				<li  class="opened active">
 					<a href="mobi.html">
 						<i class="linecons-params"></i>
 						<span class="title">MOBI</span>
@@ -182,8 +120,6 @@
 		</div>
 		
 	</nav>
-	
-	
 	<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 			
 		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->

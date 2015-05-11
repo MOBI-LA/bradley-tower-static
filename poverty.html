@@ -9,7 +9,7 @@
 	<title>Los Angeles City - Dashboard</title>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
 	<link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/xenon-core.css">
 	<link rel="stylesheet" href="assets/css/xenon-forms.css">
@@ -18,7 +18,6 @@
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/js/csi.js"></script>
-	
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="57x57.png"><!-- iPhone -->
 	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="72x72.png"><!-- iPad -->
@@ -36,9 +35,91 @@
 	<script>
 		var xenonPalette = ['#68b828','#7c38bc','#0e62c7','#fcd036','#4fcdfc','#00b19d','#ff6264','#f7aa47'];
 	</script>
+	<div class="settings-pane">
+		<a href="#" data-toggle="settings-pane" data-animate="true">
+			&times;
+		</a>
+		
 	
-	<div data-include="header.html"></div>	
-	
+	</div>
+	<nav class="navbar horizontal-menu navbar-fixed-top navbar-minimal"><!-- set fixed position by adding class "navbar-fixed-top" -->
+		
+		<div class="navbar-inner">
+		
+			<!-- Navbar Brand -->
+			<div class="navbar-brand">
+				<a href="index.html" class="logo">
+					<img src="http://datala.github.io/flushots/img/datala.png" width="80" alt="" class="hidden-xs" />
+					<img src="http://datala.github.io/flushots/img/datala.png" width="80" alt="" class="visible-xs" />
+				</a>
+
+			</div>
+				
+			<!-- Mobile Toggles Links -->
+			<div class="nav navbar-mobile">
+							<div class="mobile-menu-toggle">
+					<a href="#" data-toggle="mobile-menu-horizontal">
+						<i class="fa-bars"></i>
+					</a>
+				</div>
+				
+			</div>
+			
+			<div class="navbar-mobile-clear"></div>
+			
+			
+			
+			<!-- main menu -->
+					
+			<ul class="navbar-nav">
+				<li>
+					<a href="index.html">
+						<i class="linecons-cog"></i>
+						<span class="title">Top Sheet</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="moed.html">
+						<i class="linecons-desktop"></i>
+						<span class="title">MOED</span>
+					</a>
+				</li>
+				<li>
+					<a href="hsps.html">
+						<i class="linecons-note"></i>
+						<span class="title">HSPS</span>
+					</a>
+				</li>
+				<li  class="opened active">
+					<a href="mobi.html">
+						<i class="linecons-params"></i>
+						<span class="title">MOBI</span>
+					</a>
+					<ul>
+						<li  class="">
+							<a href="water-energy.html">
+								<i class="linecons-cog"></i>
+								<span class="title">Water & Energy</span>
+							</a>
+					
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="mocs.html">
+						<i class="linecons-diamond"></i>
+						<span class="title">MOCS</span>
+					</a>
+				</li>
+			</ul>
+					
+			
+			<!-- notifications and other links -->
+		
+		</div>
+		
+	</nav>	
 	<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 			
 		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
@@ -46,137 +127,111 @@
 		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
 	
 		<div class="main-content">
-					
-			<div class="row">
-				<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="col-sm-6">
+			<script>
+				var xenonPalette = ['#68b828','#7c38bc','#0e62c7','#fcd036','#4fcdfc','#00b19d','#ff6264','#f7aa47'];
+			</script>
+			
+													  <div class="row">
+														<a name="datavisitors"></a>
+														<div class="panel panel-default">
+						
+			
+				
+																<div class="panel-body">
+																	<div class="col-sm-12">
 							
-							<script type="text/javascript">
-								jQuery(document).ready(function($)
-								{
-									if( ! $.isFunction($.fn.dxChart))
-										return;
+																	<script type="text/javascript">
+																		jQuery(document).ready(function($)
+																		{
+																			if( ! $.isFunction($.fn.dxChart))
+																				return;
 									
-									var dataSource = [
-	{month: 'July 2013', waittime: 6.08, goal: 3 },
-	{month: 'August 2013', waittime: 14.55 },
-	{month: 'September 2013', waittime: 17.34 },
-	{month: 'October 2013', waittime: 25.89 },
-	{month: 'November 2013', waittime: 31.58 },
-	{month: 'December 2013', waittime: 16.91 },
-	{month: 'January 2014', waittime: 20.09 },
-	{month: 'February 2014', waittime: 31.59 },
-	{month: 'March 2014', waittime: 33.52 },
-	{month: 'April 2014', waittime: 21.01 },
-	{month: 'May 2014', waittime: 18.31 },
-	{month: 'June 2014', waittime: 32.9 },
-	{month: 'July 2014', waittime: 40.43 },
-	{month: 'August 2014', waittime: 39.65 },
-	{month: 'September 2014', waittime: 15.66 },
-	{month: 'October 2014', waittime: 8.78, goal: 3 },
-	{month: 'November 2014', waittime: 4.23, goal: 3 },
-	{month: 'December 2014', waittime: 5.72, goal: 3 },
-	{month: 'January 2015', waittime: 3.29, goal: 3 },
-	{month: 'February 2015', waittime: 5.95, goal: 3 },
-	{month: 'March 2015', waittime: 10.1, goal: 3 },
-	
-
-	
-
-									];
+																			var dataSource = [
+{month: 'Jan-12', waittime: 12.58, goal: 13.1},
+{month: 'Feb-12', waittime: 12.22, goal: 12.8},
+{month: 'March-12', waittime: 11.82, goal: 12.4},
+{month: 'April-12', waittime: 11.23, goal: 11.6},
+{month: 'May-12', waittime: 11.36, goal: 11.9},
+{month: 'June-12', waittime: 11.73, goal: 12.3},
+{month: 'July-12', waittime: 12.43, goal: 13.1},
+{month: 'Aug-12', waittime: 11.8, goal: 12.4},
+{month: 'Sept-12', waittime: 11, goal: 11.4},
+{month: 'Oct-12', waittime: 11, goal: 11.5},
+{month: 'Nov-12', waittime: 10.61, goal: 11},
+{month: 'Dec-12', waittime: 10.74, goal: 11.2},
+{month: 'Jan-13', waittime: 11.45, goal: 12.1},
+{month: 'Feb-13', waittime: 10.74, goal: 11.3},
+{month: 'March-13', waittime: 10.33, goal: 11},
+{month: 'April-13', waittime: 10, goal: 10.4},
+{month: 'May-13', waittime: 10.12, goal: 10.7},
+{month: 'June-13', waittime: 10.75, goal: 11.4},
+{month: 'July-13', waittime: 11.07, goal: 11.8},
+{month: 'Aug-13', waittime: 10.5, goal: 11.2},
+{month: 'Sept-13', waittime: 9.97, goal: 10.6},
+{month: 'Oct-13', waittime: 9.87, goal: 10.6},
+{month: 'Nov-13', waittime: 9.37, goal: 10.1},
+{month: 'Dec-13', waittime: 9.03, goal: 9.7},
+{month: 'Jan-14', waittime: 9.43, goal: 9.9},
+{month: 'Feb-14', waittime: 9.17, goal: 9.8},
+{month: 'March-14', waittime: 9, goal: 9.7},
+{month: 'April-14', waittime: 8.24, goal: 8.4},
+{month: 'May-14', waittime: 8.45, goal: 8.8},
+{month: 'June-14', waittime: 8.71, goal: 9.1},
+{month: 'July-14', waittime: 9.44, goal: 9.6},
+{month: 'Aug-14', waittime: 9.1, goal: 9.4},
+{month: 'Sept-14', waittime: 8.54, goal: 8.6},
+{month: 'Oct-14', waittime: 8.46, goal: 8.7},
+{month: 'Nov-14', waittime: 8.38, goal: 8.8},
+{month: 'Dec-14', waittime: 8.01, goal: 8},
+{month: 'Jan-15', waittime: 8.66, goal: 8.6},
+{month: 'Feb-15', waittime: 8.18, goal: 8.1},
+{month: 'March-15', waittime: 7.73, goal: 7.7},
+																			];
 								
-									$("#bar-3").dxChart({
-										dataSource: dataSource,
-										commonSeriesSettings: {
-											argumentField: "month"
-										},
-										series: [
-											{ valueField: "waittime", name: "DWP Wait Times (Minutes)", color: "#40bbea" },
-											{ valueField: "goal", name: "Goal", color: "#990000" },
+																			$("#bar-7").dxChart({
+																				dataSource: dataSource,
+																				commonSeriesSettings: {
+																					argumentField: "month"
+																				},
+																				series: [
+																					{ valueField: "waittime", name: "UCLA Forecast Estimate", color: "#7c38bc" },
+																		
+																					{ valueField: "goal", name: "CA EDD Estimate", color: "#990000" },
 										
-										],
-										argumentAxis:{
-											grid:{
-												visible: true
-											}
-										},
-										tooltip:{
-											enabled: true
-										},
-										title: "DWP Call Wait Time",
-										legend: {
-											verticalAlignment: "bottom",
-											horizontalAlignment: "center"
-										},
-										commonPaneSettings: {
-											border:{
-												visible: true,
-												right: false
-											}	   
-										}
-									});
-								});
-							</script>
-							<div id="bar-3" style="height: 300px; width: 100%;"></div>
-					
-					
-				</div>
-				<div class="col-sm-6">
-					<script type="text/javascript">
-					jQuery(document).ready(function($)
-					{
-						if( ! $.isFunction($.fn.dxChart))
-							return;
-							
-						var dataSource = [
-							{region: "New Starts: Purple Line Phase 1", val: 1250000000},
-							{region: "New Starts: Regional Connector", val: 670000000},
-							{region: "TIFIA: Purple Line Phase 1", val: 856000000},
-							{region: "TIFIA: Regional Connector", val: 160000000}
-						], timer;
+																				],
+																				argumentAxis:{
+																					grid:{
+																						visible: true
+																					}
+																				},
+																				tooltip:{
+																					enabled: true
+																				},
+																				title: "Unemployment Rate Estimates",
+																				legend: {
+																					verticalAlignment: "bottom",
+																					horizontalAlignment: "center"
+																				},
+																				commonPaneSettings: {
+																					border:{
+																						visible: true,
+																						right: false
+																					}	   
+																				}
+																			});
+																		});
+																	</script>
+																	<div id="bar-7" style="height: 300px; width: 100%;"></div>
+	
+														</div>
 						
-						$("#bar-8").dxPieChart({
-							dataSource: dataSource,
-							title: "MTA Money Raised ($3B)",
-							tooltip: {
-								enabled: true,
-							  	format:"millions",
-								customizeText: function() { 
-									return this.argumentText + "<br/>" + this.valueText;
-								}
-							},
-							size: {
-								height: 280
-							},
-							pointClick: function(point) {
-								point.showTooltip();
-								clearTimeout(timer);
-								timer = setTimeout(function() { point.hideTooltip(); }, 2000);
-								$("select option:contains(" + point.argument + ")").prop("selected", true);
-							},
-							legend: {
-								visible: true,
-
-							},  
-							series: [{
-								type: "doughnut",
-								argumentField: "region"
-							}],
-										palette: xenonPalette
-							
-						});
 						
-					});
-					</script>
-					<div id="bar-8" style="height: 300px; width: 100%;"></div>
-				</div>
+														</div>
+													</div>
+												</div>
 
-				</div>
-			</div>
-			
-		
-			
+
+
 				<!-- MOCS -->		
 	  		  <div id="photogrid"></div>
 					
@@ -233,7 +288,7 @@
 
 		<script type="text/javascript">
 		  document.addEventListener('DOMContentLoaded', function() {
-		  	var URL = "1ZVxlgt9couygM7bzteI3YMX8OSE-jnfZAssTb8xUQ2Q"
+		  	var URL = "1OkpjX3nTllGzkwSkdPQSfw4FlAgayRl17VROwFruFRc"
 		  	Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true, } )
 		  })
   
@@ -251,7 +306,13 @@
 			 
 			
 		  </script>
-		
+
+		<row>
+			<iframe width='100%' height='400' frameborder='0' src='https://abhinemani.cartodb.com/viz/fbcc032e-f782-11e4-af13-0e4fddd5de28/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+		</row>
+			
+			
+
 	
 			<!-- Main Footer -->
 			<!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
@@ -294,8 +355,6 @@
 		<div class="loader-2"></div>
 	</div>
 	
-
-
 
 	<!-- Bottom Scripts -->
 	<script src="assets/js/bootstrap.min.js"></script>
