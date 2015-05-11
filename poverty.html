@@ -221,15 +221,15 @@
 																			});
 																		});
 																	</script>
-																	<div id="bar-7" style="height: 300px; width: 100%;"></div>
+																	<div id="bar-7" style="height: 250px; width: 100%;"></div>
 	
 														</div>
 						
+			
 						
-														</div>
+				
 													</div>
 												</div>
-
 
 
 				<!-- MOCS -->		
@@ -282,10 +282,10 @@
 
 		     
  
-		  {{/rows}}   </div>  
+		  {{/rows}}   
+	  </div>  
+		  
 		</script>
-		
-
 		<script type="text/javascript">
 		  document.addEventListener('DOMContentLoaded', function() {
 		  	var URL = "1OkpjX3nTllGzkwSkdPQSfw4FlAgayRl17VROwFruFRc"
@@ -306,6 +306,135 @@
 			 
 			
 		  </script>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="col-sm-4">
+						<script type="text/javascript">
+						jQuery(document).ready(function($)
+						{
+							if( ! $.isFunction($.fn.dxChart))
+								return;
+							
+								var dataSource = [
+									{region: "Under 50K", val: .51},
+									{region: "50K-100K", val: .26},
+									{region: "100K-200K", val: .16},
+									{region: "Over 200K", val: .7},	
+								], timer;
+								$("#bar-10").dxPieChart({
+									dataSource: dataSource,
+									title: "Household Income",
+									tooltip: {
+										enabled: true,
+										format:"percent",
+									},
+									size: {
+										height: 250
+									},
+									pointClick: function(point) {
+										point.showTooltip();
+										clearTimeout(timer);
+										timer = setTimeout(function() { point.hideTooltip(); }, 2000);
+										$("select option:contains(" + point.argument + ")").prop("selected", true);
+									},
+									legend: {
+										visible: true,
+									},
+									series: [{
+										type: "doughnut",
+										argumentField: "region"
+									}],
+									palette: xenonPalette
+								});
+							});
+						</script>
+						<div id="bar-10" style="height: 300px; width: 100%;"></div>
+					</div>
+					<div class="col-sm-4">
+						<script type="text/javascript">
+						jQuery(document).ready(function($)
+						{
+							if( ! $.isFunction($.fn.dxChart))
+								return;
+							
+								var dataSource = [
+									{region: "Poverty", val: .34},
+									{region: "Non-Poverty", val: .66},
+								], timer;
+								$("#bar-8").dxPieChart({
+									dataSource: dataSource,
+									title: "Childhood Poverty",
+									tooltip: {
+										enabled: true,
+										format:"percent",
+									},
+									size: {
+										height: 250
+									},
+									pointClick: function(point) {
+										point.showTooltip();
+										clearTimeout(timer);
+										timer = setTimeout(function() { point.hideTooltip(); }, 2000);
+										$("select option:contains(" + point.argument + ")").prop("selected", true);
+									},
+									legend: {
+										visible: true,
+									},
+									series: [{
+										type: "doughnut",
+										argumentField: "region"
+									}],
+									palette: xenonPalette
+								});
+							});
+						</script>
+						<div id="bar-8" style="height: 300px; width: 100%;"></div>
+					</div>
+					<div class="col-sm-4">
+						<script type="text/javascript">
+						jQuery(document).ready(function($)
+						{
+							if( ! $.isFunction($.fn.dxChart))
+								return;
+							
+								var dataSource = [
+									{region: "Poverty", val: .17},
+									{region: "Non-Poverty", val: .83},
+								], timer;
+								$("#bar-9").dxPieChart({
+									dataSource: dataSource,
+									title: "Elderly Poverty",
+									tooltip: {
+										enabled: true,
+										format:"percent",
+									},
+									size: {
+										height: 250
+									},
+									pointClick: function(point) {
+										point.showTooltip();
+										clearTimeout(timer);
+										timer = setTimeout(function() { point.hideTooltip(); }, 2000);
+										$("select option:contains(" + point.argument + ")").prop("selected", true);
+									},
+									legend: {
+										visible: true,
+									},
+									series: [{
+										type: "doughnut",
+										argumentField: "region"
+									}],
+									palette: xenonPalette
+								});
+							});
+						</script>
+						<div id="bar-9" style="height: 300px; width: 100%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+												
 
 		<row>
 			<iframe width='100%' height='400' frameborder='0' src='https://abhinemani.cartodb.com/viz/fbcc032e-f782-11e4-af13-0e4fddd5de28/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
