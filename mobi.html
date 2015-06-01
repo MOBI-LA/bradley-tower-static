@@ -716,6 +716,132 @@
 											<a name="datavisitors"></a>
 											<div class="panel panel-default">
 												<div class="panel-heading">
+													<h3 class="panel-title">Deep Dive: ITA</h3>
+													<div class="panel-options">
+														<a href="#" data-toggle="panel">
+															<span class="collapse-icon">&ndash;</span>
+															<span class="expand-icon">+</span>
+														</a>
+														<a href="#" data-toggle="remove">
+															&times;
+														</a>
+													</div>
+												</div>
+			
+				
+													<div class="panel-body">
+														<div class="col-sm-9">
+							
+														<script type="text/javascript">
+															jQuery(document).ready(function($)
+															{
+																if( ! $.isFunction($.fn.dxChart))
+																	return;
+									
+																var dataSource = [
+
+																	{month: 'Jul', waittime: 5290,},
+																	{month: 'Aug', waittime: 5422,},
+																	{month: 'Sep', waittime: 5225,},
+																	{month: 'Oct', waittime: 5229,},
+																	{month: 'Nov', waittime: 4394,},
+																	{month: 'Dec', waittime: 4016,},
+																	{month: 'Jan', waittime: 5529,},
+																	{month: 'Feb', waittime: 5396,},
+																	{month: 'Mar', waittime: 7366,},
+																	{month: 'Apr', waittime: 13370,},
+																	{month: 'May', waittime: 10791,},
+																];
+								
+																$("#bar-14").dxChart({
+																	dataSource: dataSource,
+																	commonSeriesSettings: {
+																		argumentField: "month"
+																	},
+																	series: [
+																		{ valueField: "waittime", name: "Unique Monthly Visitors", color: "#40bbea" },
+																		
+										
+																	],
+																	argumentAxis:{
+																		grid:{
+																			visible: true
+																		}
+																	},
+																	tooltip:{
+																		enabled: true
+																	},
+																	title: "Monthly Unique Visitors to Open Data Portal",
+																	legend: {
+																		verticalAlignment: "bottom",
+																		horizontalAlignment: "center"
+																	},
+																	commonPaneSettings: {
+																		border:{
+																			visible: true,
+																			right: false
+																		}	   
+																	}
+																});
+															});
+														</script>
+														<div id="bar-14" style="height: 300px; width: 100%;"></div>
+	
+											</div>
+						
+						
+											<div class="col-sm-3">
+												<div class="xe-widget xe-todo-list xe-todo-list-blue">
+													<div class="xe-header">
+														<div class="xe-icon">
+															<i class="fa-file-text-o"></i>
+														</div>
+														<div class="xe-label">
+															<span>Goals for Improvement</span>
+														</div>
+													</div>
+													<div class="xe-body">
+						
+														<ul class="list-unstyled">
+													
+															<li>
+																<label>
+																	<div class="cbr-replaced"><div class="cbr-input"><input type="checkbox" class="cbr cbr-done" checked=""></div><div class="cbr-state"><span></span></div></div>
+																	<span>Redesigned open data portal</span>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="cbr-replaced"><div class="cbr-input"><input type="checkbox" class="cbr cbr-done" checked=""></div><div class="cbr-state"><span></span></div></div>
+																	<span>Developed new open data policy</span>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="cbr-replaced"><div class="cbr-input"><input type="checkbox" class="cbr cbr-done" checked=""></div><div class="cbr-state"><span></span></div></div>
+																	<span>Created LA open data community group</span>
+																</label>
+															</li>
+															<li>
+																<label>
+																	<div class="cbr-replaced"><div class="cbr-input"><input type="checkbox" class="cbr cbr-done" checked=""></div><div class="cbr-state"><span></span></div></div>
+																	<span>Created #techLA Summer Challenge</span>
+																</label>
+															</li>
+
+														</ul>
+						
+													</div>
+										
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+										  <div class="row">
+											<a name="datavisitors"></a>
+											<div class="panel panel-default">
+												<div class="panel-heading">
 													<h3 class="panel-title">Deep Dive: GSD</h3>
 													<div class="panel-options">
 														<a href="#" data-toggle="panel">
