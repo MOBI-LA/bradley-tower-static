@@ -38,7 +38,7 @@ The site is hosted on GitHub using Github Pages. This means it comes at no cost 
 
 All of the data for the "metric cards" comes from a specific Google Sheet for each page on the dashboard:
 
-<img src="img/gdocs.png" width=700 alt="Screenshot of GDocs Template">
+<img src="http://datala.github.io/bradley-tower/img/gdocs.png" width=700 alt="Screenshot of GDocs Template">
 
 It's important to keep the formatting/headers from the spreadsheet. You can grab a copy of the spreadsheet here and copy to your own Google Docs account. 
 
